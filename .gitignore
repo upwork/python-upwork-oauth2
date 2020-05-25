@@ -3,8 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# pipenv
+Pipfile*
+
 # C extensions
 *.so
+
+# nox
+.nox/
 
 # Distribution / packaging
 .Python
@@ -97,6 +103,9 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# pdoc3 documentation
+html/
 
 # mypy
 .mypy_cache/

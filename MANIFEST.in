@@ -1,9 +1,8 @@
-graft src
+include *
 include *.md LICENSE
 
-exclude .flake8 noxfile.py .coveragerc
-prune tests
-prune scripts
+recursive-include example *
 
-global-exclude *.py[cod]
-global-exclude __pycache__
+exclude .flake8 noxfile.py .coverage .coveragerc .gitignore .travis.yml .tests .docgen Pipfile*
+prune example
+prune tests
