@@ -9,7 +9,7 @@ Python bindings for Upwork API (OAuth2)
 # Upwork API
 
 This project provides a set of resources of Upwork API from http://developers.upwork.com
- based on OAuth 1.0a.
+ based on OAuth 2.0.
 
 # Features
 These are the supported API resources:
