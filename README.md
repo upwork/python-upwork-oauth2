@@ -67,5 +67,5 @@ All the dependencies will be automatically installed as well.
 Follow instructions from the `Installation` section.
 
 2.
-Run `myapp.py` and follow the instructions, or open `myapp.py` and type the `consumer_key` and `consumer_secret` that you previously got from the API Center.
+Run `myapp.py` and follow the instructions, or open `myapp.py` and type the `client_id` and `client_secret` that you previously got from the API Center.
 ***That's all. Run your app as `python myapp.py` and have fun.***'

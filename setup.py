@@ -31,6 +31,6 @@ setup(
     packages=find_packages(),
     setup_requires=[],
     url="https://github.com/upwork/python-upwork-oauth2",
-    version="3.0.2",
+    version="3.0.3",
     zip_safe=False,
 )
