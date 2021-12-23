@@ -34,6 +34,7 @@ class Client(object):
 
     def __init__(self, config):
         self.config = config
+        self.config.tenant_id = None
         try:
             # token is known, use it
             self.__oauth = OAuth2Session(
@@ -78,6 +79,10 @@ class Client(object):
     def refresh_config_from_access_token(self, token):
         """Callback from OAuth2 client which will refresh config with actual data"""
         self.config.token = token
+
+    def set_org_uid_header(self, tenant_id):
+        """Configure X-Upwork-API-TenantId header"""
+        self.config.tenant_id = tenant_id
 
     def get_actual_config(self):
         """Get actual client config"""
@@ -140,6 +145,8 @@ class Client(object):
             r = self.__oauth.put(url, json=params, headers=headers)
         elif method in {"post", "delete"}:
             headers = {"Content-type": "application/json"}
+            if self.epoint == "graphql" and self.config.tenant_id:
+                headers["X-Upwork-API-TenantId"] = self.config.tenant_id
             r = self.__oauth.post(url, json=params, headers=headers)
         else:
             raise ValueError(
@@ -161,6 +168,9 @@ def full_url(uri, epoint=None):
     :param epoint:  (Default value = None)
 
     """
+    if epoint == "graphql":
+        return upwork.GQL_EPOINT
+
     if not epoint:
         epoint = upwork.DEFAULT_EPOINT
     return "{0}/{1}{2}".format(upwork.BASE_HOST, epoint, uri)

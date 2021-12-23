@@ -2,6 +2,8 @@ import upwork
 from pprint import pprint
 from upwork.routers import auth
 
+# from upwork.routers import graphql
+
 # from upwork.routers.jobs import search
 # from upwork.routers.activities import team
 # from upwork.routers.reports import time
@@ -64,6 +66,19 @@ if __name__ == "__main__":
     try:
         print("My info")
         pprint(auth.Api(client).get_user_info())
+        # query = """
+#    query {
+#      user {
+#        id
+#        nid
+#        rid
+#      }
+#      organization {
+#        id
+#      }
+#    }"""
+        # client.set_org_uid_header("1234567890") # Organization UID
+        # pprint(graphql.Api(client).execute({'query': query}))
         # pprint(search.Api(client).find({'q': 'php'}))
         # pprint(team.Api(client).add_activity('mytestcompany', 'mytestcompany', {'code': 'team-task-001', 'description': 'Description', 'all_in_company': '1'}))
         # pprint(time.Gds(client).get_by_freelancer_full('mnovozhilov', {'tq': quote('SELECT task, memo WHERE worked_on >= "2017-06-01" AND worked_on <= "2017-06-02"')}))
