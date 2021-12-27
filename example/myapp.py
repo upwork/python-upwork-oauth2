@@ -77,7 +77,7 @@ if __name__ == "__main__":
 #        id
 #      }
 #    }"""
-        # client.set_org_uid_header("1234567890") # Organization UID
+        # client.set_org_uid_header("1234567890") # Organization UID (optional)
         # pprint(graphql.Api(client).execute({'query': query}))
         # pprint(search.Api(client).find({'q': 'php'}))
         # pprint(team.Api(client).add_activity('mytestcompany', 'mytestcompany', {'code': 'team-task-001', 'description': 'Description', 'all_in_company': '1'}))
