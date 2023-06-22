@@ -12,6 +12,7 @@
 # License::   See LICENSE.txt and TOS - https://developers.upwork.com/api-tos.html
 
 from . import upwork
+from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2Session  # type: ignore
 from urllib.parse import parse_qsl, urlencode
 
@@ -48,10 +49,16 @@ class Client(object):
                 token_updater=self.refresh_config_from_access_token,
             )
         except AttributeError as e:
-            # start from authorization step
-            self.__oauth = OAuth2Session(
-                self.config.client_id, redirect_uri=self.config.redirect_uri
-            )
+            if self.config.grant_type == "client_credentials":
+                client = BackendApplicationClient(client_id=self.config.client_id)
+                self.__oauth = OAuth2Session(
+                    client=client
+                )
+            else:
+                # start from authorization step
+                self.__oauth = OAuth2Session(
+                    self.config.client_id, redirect_uri=self.config.redirect_uri
+                )
 
     def get_authorization_url(self):
         """Get authorization URL
@@ -63,7 +70,7 @@ class Client(object):
             "{0}{1}".format(upwork.BASE_HOST, self.__uri_auth)
         )
 
-    def get_access_token(self, authorization_response):
+    def get_access_token(self, authorization_response=None):
         """Finish auth process and get access token
 
         :param authorization_response: 

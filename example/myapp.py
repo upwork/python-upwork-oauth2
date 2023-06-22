@@ -34,11 +34,15 @@ def get_desktop_client():
     # token = {'access_token': 'xxxxxxxxxxxxxxxxxx', 'expires_at': 1590479276.547947, 'expires_in': '86400', 'refresh_token': 'xxxxxxxxxxxxxxxxxxxxxxxx', 'token_type': 'Bearer'}
     # config = upwork.Config({'client_id': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'client_secret': 'xxxxxxxxxxxxx', 'token': token})
 
+    # For Client Credentials Grant the following config must be used, no other parameters are needed
+    # config = upwork.Config({'client_id': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'client_secret': 'xxxxxxxxxxxxx', 'grant_type': 'client_credentials'})
+
     client = upwork.Client(config)
 
     try:
         config.token
     except AttributeError:
+        # remove client.get_authorization_url and authz_code input in case Client Credentials Grant is used
         authorization_url, state = client.get_authorization_url()
         # cover "state" flow if needed
         authz_code = input(
@@ -48,6 +52,7 @@ def get_desktop_client():
 
         print("Retrieving access and refresh tokens.... ")
         token = client.get_access_token(authz_code)
+        # token = client.get_access_token() # for Client Credentials Grant
         # WARNING: the access token will be refreshed automatically for you
         # in case it's expired, i.e. expires_at < time(). Make sure you replace the
         # old token accordingly in your security storage. Call client.get_actual_config
