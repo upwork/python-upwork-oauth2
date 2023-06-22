@@ -21,6 +21,11 @@ class Config:
             config["client_secret"],
         )
 
+        if "grant_type" in config:
+            self.grant_type = config["grant_type"]
+        else:
+            self.grant_type = None # Authorization Code Grant flow is used by default
+
         if "redirect_uri" in config:
             self.redirect_uri = config["redirect_uri"]
 
