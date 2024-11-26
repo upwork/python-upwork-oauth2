@@ -27,7 +27,7 @@ class Api:
         :param team: String
 
         """
-        return self.__get_by_type(company, team)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific_list(self, company, team, code):
         """List all oTask/Activity records within a Company by specified code(s)
@@ -37,7 +37,7 @@ class Api:
         :param code: String
 
         """
-        return self.__get_by_type(company, team, code)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def add_activity(self, company, team, params):
         """Create an oTask/Activity record within a team
@@ -48,10 +48,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.post(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/tasks".format(company, team),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def update_activities(self, company, team, code, params):
         """Update specific oTask/Activity record within a team
@@ -63,12 +60,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/tasks/{2}".format(
-                company, team, code
-            ),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def archive_activities(self, company, team, code):
         """Archive specific oTask/Activity record within a team
@@ -78,11 +70,7 @@ class Api:
         :param code: String
 
         """
-        return self.client.put(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/archive/{2}".format(
-                company, team, code
-            )
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def unarchive_activities(self, company, team, code):
         """Unarchive specific oTask/Activity record within a team
@@ -92,11 +80,7 @@ class Api:
         :param code: String
 
         """
-        return self.client.put(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/unarchive/{2}".format(
-                company, team, code
-            )
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def update_batch(self, company, params):
         """Update a group of oTask/Activity records within a company
@@ -106,17 +90,11 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/otask/v1/tasks/companies/{0}/tasks/batch".format(company), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def __get_by_type(self, company, team, code=None):
         url = ""
         if code is not None:
             url = "/" + code
 
-        return self.client.get(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/tasks{2}".format(
-                company, team, url
-            )
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

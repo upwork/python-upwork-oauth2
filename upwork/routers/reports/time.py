@@ -78,9 +78,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/timereports/v1/providers/{0}/hours".format(freelancer_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_freelancer_full(self, freelancer_id, params):
         """Generating Freelancer's Specific Reports (with financial info)
@@ -91,9 +89,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/timereports/v1/providers/{0}".format(freelancer_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def __get_by_type(self, company, team, agency, params, hide_fin_data):
         url = ""
@@ -104,6 +100,4 @@ class Gds:
         elif agency is not None:
             url = "/agencies/{0}".format(agency)
 
-        return self.client.get(
-            "/timereports/v1/companies/{0}{1}".format(company, url), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

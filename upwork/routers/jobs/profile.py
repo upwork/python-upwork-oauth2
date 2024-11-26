@@ -26,4 +26,4 @@ class Api:
         :param key: String
 
         """
-        return self.client.get("/profiles/v1/jobs/{0}".format(key))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

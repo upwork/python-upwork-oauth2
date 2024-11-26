@@ -28,7 +28,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/hr/v2/engagements", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, reference):
         """Get specific engagement
@@ -36,4 +36,4 @@ class Api:
         :param reference: String
 
         """
-        return self.client.get("/hr/v2/engagements/{0}".format(reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

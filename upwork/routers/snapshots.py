@@ -27,9 +27,7 @@ class Api:
         :param ts: String
 
         """
-        return self.client.get(
-            "/team/v3/snapshots/contracts/{0}/{1}".format(contract, ts)
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def update_by_contract(self, contract, ts, params):
         """Update snapshot by specific contract
@@ -40,9 +38,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/team/v3/snapshots/contracts/{0}/{1}".format(contract, ts), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def delete_by_contract(self, contract, ts):
         """Delete snapshot by specific contract
@@ -51,6 +47,4 @@ class Api:
         :param ts: String
 
         """
-        return self.client.delete(
-            "/team/v3/snapshots/contracts/{0}/{1}".format(contract, ts)
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

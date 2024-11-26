@@ -26,7 +26,7 @@ class Api:
         :param key: String
 
         """
-        return self.client.get("/profiles/v1/providers/{0}".format(key))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific_brief(self, key):
         """Get brief info on specific profile
@@ -34,4 +34,4 @@ class Api:
         :param key: String
 
         """
-        return self.client.get("/profiles/v1/providers/{0}/brief".format(key))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

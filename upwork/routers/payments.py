@@ -27,6 +27,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.post(
-            "/hr/v2/teams/{0}/adjustments".format(team_reference), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

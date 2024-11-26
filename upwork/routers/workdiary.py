@@ -29,9 +29,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/team/v3/workdiaries/companies/{0}/{1}".format(company, date), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_contract(self, contract, date, params={}):
         """Get Work Diary by Contract
@@ -42,6 +40,4 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/team/v3/workdiaries/contracts/{0}/{1}".format(contract, date), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

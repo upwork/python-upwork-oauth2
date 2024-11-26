@@ -26,9 +26,7 @@ class Api:
         :param contract_id: String
 
         """
-        return self.client.get(
-            "/hr/v3/fp/milestones/statuses/active/contracts/{0}".format(contract_id)
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_submissions(self, milestone_id):
         """Get active Milestone for specific Contract
@@ -36,9 +34,7 @@ class Api:
         :param milestone_id: String
 
         """
-        return self.client.get(
-            "/hr/v3/fp/milestones/{0}/submissions".format(milestone_id)
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def create(self, params):
         """Create a new Milestone
@@ -48,7 +44,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.post("/hr/v3/fp/milestones", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def edit(self, milestone_id, params):
         """Edit an existing Milestone
@@ -59,7 +55,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put("/hr/v3/fp/milestones/{0}".format(milestone_id), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def activate(self, milestone_id, params):
         """Activate an existing Milestone
@@ -70,9 +66,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/hr/v3/fp/milestones/{0}/activate".format(milestone_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def approve(self, milestone_id, params):
         """Approve an existing Milestone
@@ -83,9 +77,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/hr/v3/fp/milestones/{0}/approve".format(milestone_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def delete(self, milestone_id):
         """Delete an existing Milestone
@@ -93,4 +85,4 @@ class Api:
         :param milestone_id: String
 
         """
-        return self.client.delete("/hr/v3/fp/milestones/{0}".format(milestone_id))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

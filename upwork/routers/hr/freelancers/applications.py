@@ -28,7 +28,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get("/hr/v4/contractors/applications", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, reference):
         """Get specific application
@@ -36,4 +36,4 @@ class Api:
         :param reference: String
 
         """
-        return self.client.get("/hr/v4/contractors/applications/{0}".format(reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

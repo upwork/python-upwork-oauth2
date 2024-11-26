@@ -31,10 +31,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/financial_account_owner/{0}".format(freelancer_reference),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, entity_reference, params):
         """Generate Financial Reports for a Specific Account
@@ -45,6 +42,4 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/financial_accounts/{0}".format(entity_reference), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

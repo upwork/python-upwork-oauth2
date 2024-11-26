@@ -22,4 +22,4 @@ class Api:
 
     def get_user_info(self):
         """Get info of authenticated user"""
-        return self.client.get("/auth/v1/info")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

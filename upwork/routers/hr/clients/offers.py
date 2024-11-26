@@ -28,7 +28,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/offers/v1/clients/offers", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, reference, params):
         """Get specific offer
@@ -39,9 +39,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.get(
-            "/offers/v1/clients/offers/{0}".format(reference), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def make_offer(self, params):
         """Make an Offer
@@ -51,4 +49,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.post("/offers/v1/clients/offers", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

@@ -22,7 +22,7 @@ class Api:
 
     def get_list(self):
         """Get Teams"""
-        return self.client.get("/hr/v2/teams")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_users_in_team(self, team_reference):
         """Get Users in Team
@@ -30,4 +30,4 @@ class Api:
         :param team_reference: String
 
         """
-        return self.client.get("/hr/v2/teams/{0}/users".format(team_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

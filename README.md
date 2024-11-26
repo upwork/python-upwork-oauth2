@@ -12,21 +12,7 @@ This project provides a set of resources of Upwork API from http://developers.up
  based on OAuth 2.0.
 
 # Features
-These are the supported API resources:
-
-* My Info
-* Custom Payments
-* Hiring
-* Job and Freelancer Profile
-* Search Jobs and Freelancers
-* Organization
-* Messages
-* Time and Financial Reporting
-* Metadata
-* Snapshot
-* Team
-* Workd Diary
-* Activities
+The library supports all GraphQL calls, which are publicly shared at Upwork
 
 # License
 
@@ -53,7 +39,7 @@ The usage of this API is ruled by the Terms of Use at:
 To integrate this library you need to have:
 
 * Python 3.8+
-* requests_oauthlib >= 1.3.0
+* requests_oauthlib == 1.3.1
 
 ## Installation
 

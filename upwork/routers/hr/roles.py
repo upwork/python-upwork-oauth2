@@ -22,7 +22,7 @@ class Api:
 
     def get_all(self):
         """Get user roles"""
-        return self.client.get("/hr/v2/userroles")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_specific_user(self, user_reference):
         """Get by specific user
@@ -31,4 +31,4 @@ class Api:
         :param user_reference: 
 
         """
-        return self.client.get("/hr/v2/userroles/{0}".format(user_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

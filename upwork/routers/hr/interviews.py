@@ -29,4 +29,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.post("/hr/v1/jobs/{0}/candidates".format(job_key), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

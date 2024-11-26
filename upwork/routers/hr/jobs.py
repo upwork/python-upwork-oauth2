@@ -28,7 +28,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/hr/v2/jobs", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, key):
         """Get specific job by key
@@ -36,7 +36,7 @@ class Api:
         :param key: String
 
         """
-        return self.client.get("/hr/v2/jobs/{0}".format(key))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def post_job(self, params):
         """Post a new job
@@ -46,7 +46,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.post("/hr/v2/jobs", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def edit_job(self, key, params):
         """Edit existent job
@@ -57,7 +57,7 @@ class Api:
         :param params: 
 
         """
-        self.client.put("/hr/v2/jobs/{0}".format(key), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def delete_job(self, key, params):
         """Delete existent job
@@ -68,4 +68,4 @@ class Api:
         :param params: 
 
         """
-        self.client.delete("/hr/v2/jobs/{0}".format(key), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

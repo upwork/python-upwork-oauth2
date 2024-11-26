@@ -22,11 +22,11 @@ class Api:
 
     def get_categories_v2(self):
         """Get categories (V2)"""
-        return self.client.get("/profiles/v2/metadata/categories")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_skills(self):
         """Get skills"""
-        return self.client.get("/profiles/v1/metadata/skills")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_skills_v2(self, params):
         """Get skills (V2)
@@ -34,19 +34,19 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/profiles/v2/metadata/skills", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specialties(self):
         """Get specialties"""
-        return self.client.get("/profiles/v1/metadata/specialties")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_regions(self):
         """Get regions"""
-        return self.client.get("/profiles/v1/metadata/regions")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_tests(self):
         """Get tests"""
-        return self.client.get("/profiles/v1/metadata/tests")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_reasons(self, params):
         """Get reasons
@@ -54,4 +54,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/profiles/v1/metadata/reasons", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
