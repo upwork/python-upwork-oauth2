@@ -12,8 +12,8 @@
 # License::   See LICENSE.txt and TOS - https://developers.upwork.com/api-tos.html
 
 from . import upwork
-from oauthlib.oauth2 import BackendApplicationClient
-from requests_oauthlib import OAuth2Session  # type: ignore
+from oauthlib.oauth2 import BackendApplicationClient # type: ignore
+from requests_oauthlib import OAuth2Session # type: ignore
 from urllib.parse import parse_qsl, urlencode
 
 

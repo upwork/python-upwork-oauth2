@@ -39,7 +39,7 @@ The usage of this API is ruled by the Terms of Use at:
 To integrate this library you need to have:
 
 * Python 3.8+
-* requests_oauthlib >= 1.3.0
+* requests_oauthlib == 1.3.1
 
 ## Installation
 

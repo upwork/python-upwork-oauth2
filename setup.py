@@ -21,7 +21,7 @@ setup(
         "Topic :: Utilities",
     ],
     description="Python bindings for Upwork API (OAuth2)",
-    install_requires=["requests_oauthlib>=1.3.0"],
+    install_requires=["requests_oauthlib==1.3.1"],
     license="Apache Software License 2.0",
     long_description=readme,
     long_description_content_type="text/markdown",
