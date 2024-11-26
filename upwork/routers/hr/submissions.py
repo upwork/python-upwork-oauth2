@@ -28,7 +28,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.post("/hr/v3/fp/submissions", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def approve(self, submission_id, params):
         """Approve an existing Submission
@@ -39,9 +39,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/hr/v3/fp/submissions/{0}/approve".format(submission_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def reject(self, submission_id, params):
         """Reject an existing Submission
@@ -52,6 +50,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/hr/v3/fp/submissions/{0}/reject".format(submission_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

@@ -29,7 +29,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put("/hr/v2/contracts/{0}/suspend".format(reference), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def restart_contract(self, reference, params):
         """Restart Contract
@@ -40,7 +40,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put("/hr/v2/contracts/{0}/restart".format(reference), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def end_contract(self, reference, params):
         """End Contract
@@ -51,4 +51,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.delete("/hr/v2/contracts/{0}".format(reference), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

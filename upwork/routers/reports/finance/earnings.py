@@ -31,9 +31,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/providers/{0}/earnings".format(freelancer_reference), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_freelancers_team(self, freelancer_team_reference, params):
         """Generate Earning Reports for a Specific Freelancer's Team
@@ -44,12 +42,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/provider_teams/{0}/earnings".format(
-                freelancer_team_reference
-            ),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_freelancers_company(self, freelancer_company_reference, params):
         """Generate Earning Reports for a Specific Freelancer's Company
@@ -60,12 +53,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/provider_companies/{0}/earnings".format(
-                freelancer_company_reference
-            ),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_buyers_team(self, buyer_team_reference, params):
         """Generate Earning Reports for a Specific Buyer's Team
@@ -76,10 +64,7 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/buyer_teams/{0}/earnings".format(buyer_team_reference),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_by_buyers_company(self, buyer_company_reference, params):
         """Generate Earning Reports for a Specific Buyer's Company
@@ -90,9 +75,4 @@ class Gds:
         :param params: 
 
         """
-        return self.client.get(
-            "/finreports/v2/buyer_companies/{0}/earnings".format(
-                buyer_company_reference
-            ),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

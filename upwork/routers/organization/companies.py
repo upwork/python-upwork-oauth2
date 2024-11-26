@@ -22,7 +22,7 @@ class Api:
 
     def get_list(self):
         """Get Companies Info"""
-        return self.client.get("/hr/v2/companies")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, company_reference):
         """Get Specific Company
@@ -30,7 +30,7 @@ class Api:
         :param company_reference: String
 
         """
-        return self.client.get("/hr/v2/companies/{0}".format(company_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_teams(self, company_reference):
         """Get Teams in Company
@@ -38,7 +38,7 @@ class Api:
         :param company_reference: String
 
         """
-        return self.client.get("/hr/v2/companies/{0}/teams".format(company_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_users(self, company_reference):
         """Get Users in Company
@@ -46,4 +46,4 @@ class Api:
         :param company_reference: String
 
         """
-        return self.client.get("/hr/v2/companies/{0}/users".format(company_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

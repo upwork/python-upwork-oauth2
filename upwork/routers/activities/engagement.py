@@ -12,7 +12,7 @@ class Api:
         :param engagement_ref: String
 
         """
-        return self.client.get("/tasks/v2/tasks/contracts/{0}".format(engagement_ref))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def assign(self, company, team, engagement, params):
         """Assign engagements to the list of activities
@@ -24,12 +24,7 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/otask/v1/tasks/companies/{0}/teams/{1}/engagements/{2}/tasks".format(
-                company, team, engagement
-            ),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def assign_to_engagement(self, engagement_ref, params):
         """Assign to specific engagement the list of activities
@@ -39,6 +34,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.put(
-            "/tasks/v2/tasks/contracts/{0}".format(engagement_ref), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

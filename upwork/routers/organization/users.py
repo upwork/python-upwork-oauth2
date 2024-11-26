@@ -22,7 +22,7 @@ class Api:
 
     def get_my_info(self):
         """Get Auth user info"""
-        return self.client.get("/hr/v2/users/me")
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_specific(self, user_reference):
         """Get Specific User Info
@@ -30,4 +30,4 @@ class Api:
         :param user_reference: String
 
         """
-        return self.client.get("/hr/v2/users/{0}".format(user_reference))
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

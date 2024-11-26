@@ -28,4 +28,4 @@ class Api:
         :param params: 
 
         """
-        return self.client.get("/profiles/v2/search/providers", params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")

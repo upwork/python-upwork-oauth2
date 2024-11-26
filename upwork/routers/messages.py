@@ -28,7 +28,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get("/messages/v3/{0}/rooms".format(company), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_room_details(self, company, room_id, params={}):
         """Get a specific room information
@@ -39,9 +39,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/messages/v3/{0}/rooms/{1}".format(company, room_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_room_messages(self, company, room_id, params={}):
         """Get messages from a specific room
@@ -52,9 +50,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/messages/v3/{0}/rooms/{1}/stories".format(company, room_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_room_by_offer(self, company, offer_id, params={}):
         """Get a specific room by offer ID
@@ -65,9 +61,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/messages/v3/{0}/rooms/offers/{1}".format(company, offer_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_room_by_application(self, company, application_id, params={}):
         """Get a specific room by application ID
@@ -78,10 +72,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/messages/v3/{0}/rooms/applications/{1}".format(company, application_id),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def get_room_by_contract(self, company, contract_id, params={}):
         """Get a specific room by contract ID
@@ -92,9 +83,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.get(
-            "/messages/v3/{0}/rooms/contracts/{1}".format(company, contract_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def create_room(self, company, params={}):
         """Create a new room
@@ -104,7 +93,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.post("/messages/v3/{0}/rooms".format(company), params)
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def send_message_to_room(self, company, room_id, params={}):
         """Send a message to a room
@@ -115,9 +104,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.post(
-            "/messages/v3/{0}/rooms/{1}/stories".format(company, room_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def send_message_to_rooms(self, company, params={}):
         """Send a message to a batch of rooms
@@ -127,9 +114,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.post(
-            "/messages/v3/{0}/stories/batch".format(company), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def update_room_settings(self, company, room_id, username, params={}):
         """Update a room settings
@@ -141,10 +126,7 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.put(
-            "/messages/v3/{0}/rooms/{1}/users/{2}".format(company, room_id, username),
-            params,
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
 
     def update_room_metadata(self, company, room_id, params={}):
         """Update the metadata of a room
@@ -155,6 +137,4 @@ class Api:
         :param params:  (Default value = {})
 
         """
-        return self.client.put(
-            "/messages/v3/{0}/rooms/{1}".format(company, room_id), params
-        )
+        raise Exception("The legacy API was deprecated. Please, use GraphQL call - see example in this library.")
